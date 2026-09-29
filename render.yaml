@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bhoomi-setu
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    disk:
+      name: bhoomi-data
+      mountPath: /data
+      sizeGB: 1
